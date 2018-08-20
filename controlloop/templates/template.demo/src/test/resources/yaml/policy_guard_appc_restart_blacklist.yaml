@@ -1,0 +1,27 @@
+guard:
+  version: 2.0.0
+
+guards:
+  - id: unique_guard_4_Blacklist
+    name: APPC Restart Blacklist
+    description: |
+      We deny restart of the blacklisted targets (avoid midnight to 5am)
+    match_parameters:
+      actor: APPC
+      recipe: Restart
+    limit_constraints:
+      - blacklist:
+          - server123
+          - server2234
+          - vserver.vserver-name22
+          - aaabbbccc
+          - foobartriggersource35
+        active_time_range:
+          start: 00:00:00-05:00
+          end: 23:59:59-05:00
+          
+          
+          
+          
+          
+          
