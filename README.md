@@ -16,7 +16,7 @@ After deleting the vf-module, vserver named-query response will not have the vf-
 Retrieve the named-query response from the drools memory and use it for creating the SO vf-module create request.
 To address above points, need to pass the drools WorkingMemory reference to the SOActorServiceProvider.java
 
-Impacted files :
+Impacted files :
 actor.so-1.1.1.jar
 	org.onap.policy.controlloop.actor.so.SOActorServiceProvider.java
 eventmanager-1.1.1.jar
